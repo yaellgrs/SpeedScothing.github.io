@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .timer{
@@ -32,4 +33,21 @@ body {
 #timerPressable {
     position: relative;
     z-index: 999;
+}
+
+#confirm{
+    width: 15em;
+    height: 5em;
+    border-radius: 1em;
+    border-width: 0.5em;
+    border-color:rgb(151, 150, 150);
+    background-color:transparent;
+    color:rgb(151, 150, 150);
+}
+
+
+@media (max-width: 768px){
+.timer{
+    font-size: 5em;
+
 }

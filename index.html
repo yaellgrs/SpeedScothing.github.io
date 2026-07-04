@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ConfirmRecord.css" />
     <title>Speed Scotching</title>
   </head>
   <body>
@@ -12,9 +14,52 @@
             <div id="timer" class='timer'>00:00:00</div>
 
         </div>
-          <!-- <button id="start">Démarrer</button>
-          <button id="stop">Stop</button>
-          <button id="reset">Reset</button> -->
+        
+
+        <!-- RECORD FORMULAIRE    -->
+        <div id="recordOverlay" class="record-Overlay">
+          <div class="record-Box">
+            <label></label>
+            <h2 id="timerBrut">timer brute : 00:00:00</h2>
+            <form id="recordForm" class="record-Form">
+              <div id="penality" class="penality">
+                <label id="penalityCounter">Pénalités: +0s</label>
+                <div id="penalityAdded">
+
+                </div>
+                <div id="penalityToAdd">
+                  <button type="button" class="penalityButtonToAdd" value=3>+ oublie scotch</button>
+                  <button type="button" class="penalityButtonToAdd" value=3>+ scotch mal placé</button>
+                  <button type="button" class="penalityButtonToAdd" value=10>+ oublie grave</button>
+                </div>
+              </div>
+
+              <h2 id="timerFinal">timer final: 00:00:00</h2>
+              
+              <div>
+                <label for="category">Catégorie</label>
+                <select id="category" name="category">
+                  <option value="FSSP">FSSP</option>
+                  <option value="FSSP+tag">FSSP+tag</option>
+                  <option value="SP unseed">SP unseed</option>
+                  <option value="FP unseed">FP unseed</option>
+                </select>
+              </div>
+
+              <div>
+                <input type="checkbox" id="officiel" name="officiel" value="officiel">
+                <label for="officiel">Officiel record</label><br>
+              </div>
+
+
+              <div class="record-actions">
+                <button type="submit" id="recordValidate">Valider</button>
+                <button type="button" id="recordCancel">Annuler</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
 
   </body>
 </html>
