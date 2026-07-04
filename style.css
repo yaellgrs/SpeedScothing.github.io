@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(25, 25, 25);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+#container{
+   /* background-color: blue;  */
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-weight: bold;
+    color:rgb(151, 150, 150);
+    font-size: 10em;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.timerStart{
+    color:red;
+}
+
+#timerPressable {
+    position: relative;
+    z-index: 999;
+}
