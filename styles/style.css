@@ -60,6 +60,10 @@ body {
     color:red;
 }
 
+.timerHolded{
+    color:green
+}
+
 #timerPressable {
     position: relative;
     z-index: 999;

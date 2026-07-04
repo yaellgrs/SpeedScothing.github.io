@@ -4,7 +4,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
-const holdTimer = 10;
+const holdTimer = 100;
 
 
 const Div_display = document.getElementById('timer');
@@ -97,6 +97,9 @@ Btn_timerPressable.addEventListener('pointerdown', ()=>{
     if(intervalToStart) return;
     intervalToStart = setInterval(()=>{
         startMs++;
+        if(startMs > holdTimer){
+            Div_display.classList.add('timerHolded');
+        }
     }, 10);
 
 });
@@ -112,7 +115,7 @@ Btn_timerPressable.addEventListener('pointerup', ()=>{
         return;
     }
     Div_display.classList.remove('timerStart');
-
+    Div_display.classList.remove('timerHolded');
     clearInterval(intervalToStart);
     intervalToStart = null;
 
