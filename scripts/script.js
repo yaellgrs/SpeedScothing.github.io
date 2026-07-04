@@ -65,12 +65,15 @@ recordForm.addEventListener('submit', async (e) =>{
     const category = document.getElementById('category').value;
     const officiel = document.getElementById('officiel').checked;
     const finalScore= GetFinalScore();
+    const author = document.getElementById('author').value;
+
 
     const { data, error } = await supabaseClient.from('SpeedScothing').insert([{
         time:finalScore, 
         penalty:penality,
         category: category,
-        officiel: officiel
+        officiel: officiel,
+        author: author,
     }]);
     if (error) {
         console.error('Erreur Supabase:', error);

@@ -4,12 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="ConfirmRecord.css" />
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/ConfirmRecord.css" />
     <title>Speed Scotching</title>
   </head>
   <body>
+        <div class="menu">
+          <label>Timer</label>
+          <a href="record.html">Record</a>
+        </div>
+
         <div id="container">
             <div id="timer" class='timer'>00:00:00</div>
 
@@ -19,7 +24,10 @@
         <!-- RECORD FORMULAIRE    -->
         <div id="recordOverlay" class="record-Overlay">
           <div class="record-Box">
-            <label></label>
+            <div>
+              <label for="author">SpeedSchotcheur</label>
+              <input type="text" id="author" name="author"/>
+            </div>
             <h2 id="timerBrut">timer brute : 00:00:00</h2>
             <form id="recordForm" class="record-Form">
               <div id="penality" class="penality">
@@ -47,8 +55,9 @@
               </div>
 
               <div>
-                <input type="checkbox" id="officiel" name="officiel" value="officiel">
+                
                 <label for="officiel">Officiel record</label><br>
+                <input type="checkbox" id="officiel" name="officiel" value="officiel">
               </div>
 
 

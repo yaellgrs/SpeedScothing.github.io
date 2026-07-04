@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/record.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/record.css" />
+    <title>Speed Scotching</title>
+  </head>
+  <body>
+        <div class="menu">
+          <a href="index.html">Timer</a>
+          <label>Record</label>
+        </div>
+        <div class="showOfficielDiv">
+            <label for="showOfficiel">Afficher Seulement les records officialité par l'équipe 5.</label><br>
+            <input type="checkbox" id="showOfficiel" name="showOfficiel" value="showOfficiel">
+        </div>
+
+        <div id="categoryButtons">
+            <button type="button" class="cateBtn" data-cate="FSSP">FSSP</button>
+            <button type="button" class="cateBtn" data-cate="FSSP+tag">FSSP+tag</button>
+            <button type="button" class="cateBtn" data-cate="SP unseed">SP unseed</button>
+            <button type="button" class="cateBtn" data-cate="FP unseed">FP unseed</button>
+        </div>
+
+        <div id="recordTable" class="record-table">
+
+
+        </div>
+
+</body>

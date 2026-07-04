@@ -1,0 +1,75 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+        display: flex;
+}
+
+.showOfficielDiv{
+    display: flex;
+    color:white;
+    background-color:rgb(30, 30, 30);
+    padding:1em;
+    border: 0.2em solid white;
+    border-radius:0.3em;
+    margin:1em;
+}
+
+.cateBtn {
+    border-radius: 1em;
+    padding:1em;
+    border: 5px solid #2a2e3f;
+    background-color: transparent;
+    color:white;
+}
+
+.cateBtn:hover {
+    border-color: #11131a;
+    color:rgb(88, 87, 87);
+}
+
+.record-table {
+    width: 100%;
+    max-width: 800px;      /* limite raisonnable sur desktop */
+    padding: 0 16px;
+    overflow-x: auto;      /* 👈 scroll horizontal si ça dépasse */
+}
+
+.record-table h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #f2f2f2;
+}
+
+.record-table table {
+    width: 100%;
+    min-width: 500px;      /* 👈 empêche le tableau de s'écraser en dessous de cette largeur */
+    border-collapse: collapse;
+}
+
+.record-table thead {
+    background: #0303036c;
+    border-radius: 1em;
+}
+
+.record-table th,
+.record-table td {
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+    color:white;
+}
+
+.record-table th {
+    color: #aab0c0;
+}
+
+
+.record-table tbody tr:first-child td:first-child {
+    color: #ffd700;
+}
+

@@ -3,9 +3,39 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
+    justify-content: center;
+    align-items: center; 
 }
+
+.menu{
+
+    position:absolute;
+    background-color: rgb(47, 47, 47);
+    border: 0.2em solid rgb(127, 127, 127);
+    top:1em;
+    padding:2em 1em 2em 1em;
+    border-radius: 1em;
+}
+
+.menu a, .menu label{
+   text-decoration: none; 
+   color:rgb(181, 183, 185);
+   font-size: 2em;
+   margin:1em;
+    user-select: none;
+}
+
+.menu label{
+    color:rgb(0, 0, 0);
+    user-select: none;
+
+}
+
+.menu a:hover{
+    color:rgb(125, 125, 125);
+}
+
+
 
 #container{
    /* background-color: blue;  */
@@ -47,7 +77,8 @@ body {
 
 
 @media (max-width: 768px){
-.timer{
-    font-size: 5em;
+    .timer{
+        font-size: 3em;
 
+    }
 }
